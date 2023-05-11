@@ -1,0 +1,149 @@
+@import "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;700;800;900&display=swap";
+:root {
+  --card-color: #f7f1e3;
+  --bg-color: #ddd;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Nunito Sans, sans-serif;
+}
+
+.header {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 120px;
+  display: flex;
+}
+
+.header img {
+  width: 100px;
+}
+
+.header ul {
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  display: flex;
+}
+
+.header ul li {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.header ul li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.body {
+  padding: 0 120px;
+}
+
+.body__filtersection {
+  margin-bottom: 20px;
+}
+
+.cardsection {
+  flex-wrap: wrap;
+  gap: 40px 20px;
+  display: flex;
+}
+
+.card {
+  cursor: pointer;
+  width: 290px;
+  flex-direction: column;
+  display: flex;
+}
+
+.card:hover {
+  transition: all .2s;
+  transform: scale(.98);
+  box-shadow: 6px 6px 8px #c4b1b133;
+}
+
+.card .img-container {
+  width: 290px;
+  height: 210px;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.card .desc {
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+}
+
+.skeleton {
+  --color-skeleton: #bebebe;
+}
+
+.skeleton img {
+  background-color: var(--color-skeleton);
+}
+
+.skeleton .desc h4, .skeleton .desc h6, .skeleton .desc p {
+  background-color: var(--color-skeleton);
+  margin-top: 10px;
+}
+
+.skeleton .desc h4 {
+  max-width: 80%;
+}
+
+.skeleton .desc h6 {
+  max-width: 60%;
+}
+
+.loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.loading:after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to left, #0000, #d8d8d8, #0000);
+  animation: 1s linear infinite loading-content;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes loading-content {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.error {
+  height: 98.5vh;
+}
+
+.error__container {
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  padding-top: 10%;
+  display: flex;
+}
+
+/*# sourceMappingURL=index.34b7aba5.css.map */

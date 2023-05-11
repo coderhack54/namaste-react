@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --card-color:#f7f1e3;
+    --bg-color:#dddddd;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 120px;
+}
+
+
+.header img{
+    width: 100px;
+
+}
+.header ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+.header ul li{
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+}
+.header ul li a{
+    text-decoration: none;
+    color: inherit;
+}
+.body{
+    padding: 0px 120px;
+}
+.body__filtersection{
+    margin-bottom: 20px;
+}
+.cardsection{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    row-gap: 40px;
+}
+
+
+.card{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    width: 290px;
+}
+.card:hover{
+    transform: scale(0.98,0.98);
+    transition: 0.2s ;
+    box-shadow: 6px 6px 8px  rgba(196, 177, 177, 0.2);
+}
+.card .img-container{
+    width: 290px;
+    height: 210px;
+    
+}
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+.card .desc{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.skeleton{
+    --color-skeleton:rgb(190,190,190);
+  }
+
+  .skeleton img{
+    background-color: var(--color-skeleton);
+  }
+
+  .skeleton .desc h4,.skeleton .desc h6,.skeleton .desc p{
+    background-color: var(--color-skeleton);
+    margin-top:10px;
+  }
+
+  .skeleton .desc h4{
+    max-width: 80%;
+  }
+  .skeleton .desc h6{
+    max-width: 60%;
+  }
+
+
+
+  .loading{
+    position: relative;
+    overflow: hidden;
+  }
+
+  .loading::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image:linear-gradient(to left,transparent,rgb(216,216,216),transparent);
+    animation: loading-content 1s linear  infinite;
+  }
+
+  @keyframes loading-content {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+  }
+
+
+/* error css */
+
+.error{
+  height: 98.5vh;
+}
+.error__container{
+  padding-top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 1em;
+}
